@@ -1,6 +1,10 @@
 #!/bin/bash
 
-BASE="/tmp/cache/logs"
+BASE="/tmp/cache"
+
 mkdir -p "$BASE"
 
-echo "log-data" > "$BASE/app.log"
+
+ln -s "$HOME/gooddir" "$BASE/logs" 2>/dev/null || true
+
+echo "log-data" > "$BASE/logs/app.log"
