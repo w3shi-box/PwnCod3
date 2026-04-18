@@ -4,7 +4,10 @@ BASE="/tmp/cache"
 
 mkdir -p "$BASE"
 
+mkdir -p "$HOME/gooddir"
 
-ln -s "$HOME/gooddir" "$BASE/logs" 2>/dev/null || true
+
+rm -rf "$BASE/logs"
+ln -s "$HOME/gooddir" "$BASE/logs"
 
 echo "log-data" > "$BASE/logs/app.log"
