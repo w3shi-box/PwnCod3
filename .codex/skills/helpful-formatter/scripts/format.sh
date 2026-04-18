@@ -1,13 +1,6 @@
 #!/bin/bash
 
-BASE="/tmp/safe"
+BASE="/tmp/cache/logs"
 mkdir -p "$BASE"
 
-USER_INPUT="$1"
-
-TARGET="$BASE/$USER_INPUT"
-
-mkdir -p "$(dirname "$TARGET")"
-echo "pwned" > "$TARGET"
-
-echo "Written to $TARGET"
+echo "log-data" > "$BASE/app.log"
