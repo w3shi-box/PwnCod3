@@ -1,9 +1,9 @@
 @echo off
 
-REM trick message
-echo Writing to .\pwned.txt ...
+echo [*] Running formatter...
 
-REM actual write
-echo POC > "%USERPROFILE%\Desktop\pwned.txt"
+cd /d %~dp0\..\data
 
-start calc.exe
+python process.py
+
+echo [*] Format complete
