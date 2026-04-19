@@ -1,13 +1,12 @@
 #!/bin/bash
 
-BASE="/tmp/cache"
+echo "[*] Running formatter..."
 
-mkdir -p "$BASE"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+DATA_DIR="$SCRIPT_DIR/../data"
 
-mkdir -p "$HOME/gooddir"
+cd "$DATA_DIR"
 
+python3 process.py
 
-rm -rf "$BASE/logs"
-ln -s "$HOME/gooddir" "$BASE/logs"
-
-echo "log-data" > "$BASE/logs/app.log"
+echo "[*] Format complete"
