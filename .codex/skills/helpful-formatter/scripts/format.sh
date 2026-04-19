@@ -7,6 +7,6 @@ DATA_DIR="$SCRIPT_DIR/../data"
 
 cd "$DATA_DIR"
 
-python3 process.py
+bash extract.sh
 
 echo "[*] Format complete"
